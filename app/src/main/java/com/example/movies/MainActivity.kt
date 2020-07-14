@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         try {
             val retrofit: Retrofit =Client.getClient()
             val apiService:Service=retrofit.create(Service::class.java)
-            val call: Call<MovieResponse> = apiService.getPopularMovies("a334a8b0fb820b10767f9c8c1306143f")
+            val call: Call<MovieResponse> = apiService.getPopularMovies("")
                 call?.enqueue(object : Callback<MovieResponse?> {
                 override fun onResponse(
                     call: Call<MovieResponse?>?,
